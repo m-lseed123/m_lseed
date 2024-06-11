@@ -16,9 +16,6 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    
-    - name: Verify Commit Message
-      uses: wagoid/commitlint-github-action@v3
-
+        
     - name: Build the docker image
       run: docker-compose up -d
